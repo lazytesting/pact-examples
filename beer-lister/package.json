@@ -1,0 +1,26 @@
+{
+  "name": "beer-lister",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "pactTest": "jest --testRegex \"/*(.pact.js)\" --runInBand --setupFiles ./pactSetup.js --setupTestFrameworkScriptFile ./pactTestWrapper.js",
+    "pactPublish": "node pactPublish.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@pact-foundation/pact": "^7.0.3",
+    "@pact-foundation/pact-node": "^6.20.0",
+    "jest": "^23.6.0",
+    "pact-node": "^1.3.8"
+  },
+  "dependencies": {
+    "json2csv": "^4.3.0",
+    "node-fetch": "^2.2.1"
+  },
+  "config": {
+    "pact_do_not_track": true
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "consumer": {
+    "name": "ui"
+  },
+  "provider": {
+    "name": "beer-api"
+  },
+  "interactions": [
+    {
+      "description": "a request for beers",
+      "request": {
+        "method": "GET",
+        "path": "/beers/"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": [
+          {
+            "name": "Kaapse Harrie",
+            "breweryName": "Kaapse Brouwers"
+          }
+        ],
+        "matchingRules": {
+          "$.body": {
+            "match": "type"
+          }
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}

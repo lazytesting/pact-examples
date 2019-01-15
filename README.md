@@ -1,1 +1,1 @@
-# pact-examples
+# PACT example
